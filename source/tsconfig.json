@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "target": "ES5",
+        "lib": [
+            "ES2021",
+            "DOM"
+        ],
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+        "sourceMap": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./*"
+            ]
+        },
+        "outDir": "../dist/bot"
+    }
+}

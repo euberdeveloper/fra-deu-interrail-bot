@@ -98,7 +98,8 @@ ${commandsText}`;
         await Promise.all(tasks);
     }
 
-    public async sendNotificationMessage(message: string): Promise<void> {
+    public async sendNotificationMessage(alertMessage: string): Promise<void> {
+        const message = `Something changed: the new alert message is <b>${alertMessage}</b>`;
         await this.sendMessageToEveryone(message);
     }
 

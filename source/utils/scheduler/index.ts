@@ -46,13 +46,21 @@ export class Scheduler {
     }
 
     public async executeJob(): Promise<void> {
-        logger.info('Started job');
         try {
-            if (await this.scraper.isOpen()) {
-                logger.success('Website is open');
-                await this.bot.sendNotificationMessage('Website seems to be open!!!');
+            logger.info('Started job');
+            const oldAlertMessage = await this.database.getAlertMessage();
+            const newAlertMessage = await this.scraper.getAlertText();
+            logger.debug('Alert message', newAlertMessage);
+            if (newAlertMessage === null) {
+                logger.warning('Alert message is null');
+            } else {
+                if (oldAlertMessage !== null && oldAlertMessage !== newAlertMessage) {
+                    logger.success('Something changed!!!');
+                    await this.bot.sendNotificationMessage(newAlertMessage);
+                }
+                await this.database.setAlertMessage(newAlertMessage);
+                logger.success('Finished job');
             }
-            logger.success('Finished job');
         } catch (error) {
             logger.error('Error in scheduler', error);
         }

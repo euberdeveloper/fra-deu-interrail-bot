@@ -15,7 +15,7 @@ async function executeTask(): Promise<void> {
     try {
         logger.info('Starting...');
         const scraper = new Scraper(OPTIONS.websiteUrl);
-        logger.info(await scraper.getAlertText());
+        logger.info((await scraper.getAlertText()) ?? 'No alert text found');
     } catch (error: any) {
         logger.error(error);
     }

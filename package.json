@@ -1,7 +1,7 @@
 {
-  "name": "tumi-app-bot",
+  "name": "fra-deu-interrail-bot",
   "version": "3.5.0",
-  "description": "A telegram bot to receive a message when deu-fra interrail works",
+  "description": "A telegram bot to receive a message when the website for Deutschland/Frankreich Inte",
   "main": "dist/main.js",
   "scripts": {
     "pretranspile:source": "shx rm -rf dist/bot",
@@ -28,25 +28,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/euberdeveloper/tumi-app-bot.git"
+    "url": "git+https://github.com/euberdeveloper/fra-deu-interrail-bot.git"
   },
   "keywords": [
-    "tumi",
-    "tum",
-    "muenchen",
-    "esn",
-    "events"
+    "bot"
   ],
   "author": "Eugenio Vinicio Berretta <euberdeveloper@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/euberdeveloper/tumi-app-bot/issues"
+    "url": "https://github.com/euberdeveloper/fra-deu-interrail-bot/issues"
   },
-  "homepage": "https://github.com/euberdeveloper/tumi-app-bot#readme",
+  "homepage": "https://github.com/euberdeveloper/fra-deu-interrail-bot#readme",
   "devDependencies": {
     "@euberdeveloper/eslint-plugin": "^2.3.0",
     "@types/bull": "^3.15.8",
-    "@types/date-and-time": "^0.13.0",
     "@types/minimist": "^1.2.2",
     "@types/module-alias": "^2.0.1",
     "@types/redis": "^4.0.11",
@@ -57,10 +52,8 @@
     "axios": "^1.4.0",
     "bull": "^4.8.4",
     "cheerio": "^1.0.0-rc.12",
-    "date-and-time": "^2.4.0",
     "dotenv": "^16.0.1",
     "euberlog": "^2.1.5",
-    "graphql-request": "^4.3.0",
     "minimist": "^1.2.6",
     "module-alias": "^2.2.2",
     "redis": "^4.2.0",

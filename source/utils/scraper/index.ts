@@ -21,7 +21,7 @@ export class Scraper {
     public async isOpen(): Promise<boolean> {
         try {
             const text = await this.getAlertText();
-            return text === 'ist Opfer seines Erfolgs geworden';
+            return !text.includes('ist Opfer seines Erfolgs geworden');
         } catch (error) {
             logger.error('Error in fetching website html', error);
         }
